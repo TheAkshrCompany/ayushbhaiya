@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<title>About Me</title>-->
+    <title> Ayush Pandey </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="blog, accent, , Ayush Pandey, jekyll">
+    <meta name="author" content="">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if (typeof YOUTUBE_VIDEO_MARGIN == 'undefined') {
+                YOUTUBE_VIDEO_MARGIN = 5;
+            }
+            $('iframe').each(function (index, item) {
+                if ($(item).attr('src').match(/(https?:)?\/\/www\.youtube\.com/)) {
+                    var w = $(item).attr('width');
+                    var h = $(item).attr('height');
+                    var ar = h / w * 100;
+                    ar = ar.toFixed(2);
+                    //Style iframe    
+                    $(item).css('position', 'absolute');
+                    $(item).css('top', '0');
+                    $(item).css('left', '0');
+                    $(item).css('width', '100%');
+                    $(item).css('height', '100%');
+                    $(item).css('float', 'right');
+                    $(item).css('margin-left', '2px');
+                    $(item).css('max-width', w + 'px');
+                    $(item).css('max-height', h + 'px');
+                    $(item).wrap('<div style="max-width:' + w + 'px;margin:0 auto; padding:' + YOUTUBE_VIDEO_MARGIN + 'px;" />');
+                    $(item).wrap('<div style="position: relative;padding-bottom: ' + ar + '%; height: 0; overflow: hidden;" />');
+                }
+            });
+        });
+    </script>
+
+    <meta name="description" content="">
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="alternate" type="application/rss+xml" title="Ayush Pandey RSS" href="/feed.xml" />
+    <link rel="stylesheet" href="/~apandey/css/main.css">
+
+
+    <!-- Facebook Open Graph -->
+    <meta name="og:description" content="">
+    <meta name="og:title" content="Ayush Pandey">
+    <meta name="og:url" content="/~apandey/index.html">
+    <meta name="og:type" content="article">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ayush Pandey">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="https://twitter.com/ayush9pandey">
+
+    <meta name="twitter:image" content="">
+
+</head>
+
+<body>
+    <div id="newnav">
+       <div class="name"> Ayush Pandey </div>
+      <div id="navlist">
+       <div class="navoptions">
+           <a href="index.html"> About</a>
+        </div>
+        <div class="navoptions">
+           <a href="/~apandey/Ayush_Pandey_CV.pdf"> CV</a>
+        </div>
+        <div class="navoptions">
+           <a href="blog.html"> Blog</a>
+        </div>
+        <div class="navoptions">
+           <a href="publication.html"> Publications</a>
+        </div>
+        <div class="navoptions">
+           <a href="./teaching.html"> Teaching & Mentoring </a>
+        </div>
+        <div class="navoptions">
+           <a href="contact.html">contact</a>
+        </div>
+        
+    </div>
+    <div id="mobnav">
+        <button id="menubutton" onclick="togglelist" style="background-color: white;"> click herer</button>
+    </div>
+    <div id="mobilelist">
+        <ul>
+            <br>
+            <li><a href="index.html">About</a></li> <hr>
+            <li><a href="/~apandey/Ayush_Pandey_CV.pdf">CV</a></li> <hr>
+            <li><a href="blog.html">Blog</a></li><hr>
+            <li><a href="publication.html">Publications</a></li> <hr> 
+            <li><a href="teaching.html">Teaching & Mentoring</a></li> <hr>
+            <li><a href="contact.html">Contact</a></li> <hr>
+
+          </ul>
+    </div>
+    
+    
+    <script>
+        var button=document.getElementById("menubutton");
+       function togglelist(){
+           if(document.getElementById("mobilelist").style.display == "none"){
+            document.getElementById("mobilelist").style.display = 'block';}
+            else{
+                document.getElementById("mobilelist").style.display = 'none';}
+
+            
+        }
+        button.addEventListener("click",togglelist);
+
+    </script>
+    </div>
+    <div class="wrapper">
+
+        
+        <div class="container content">
+            <h2 id="about-me">About Me</h2>
+
+            <p><img id="profile-picture" src="./Ayush1.jpeg" /></p>
+
+            <p>I am a PhD candidate in Control and Dynamical Systems at California Institute of Technology, working on
+                modeling and analysis of synthetic biological circuits. I am working with <a
+                    href="http://www.cds.caltech.edu/~murray/wiki/index.php?title=Main_Page">Richard Murray</a> in the
+                <a href="https://www.cds.caltech.edu/biocircuits/index.php/Main_Page">Biocircuits Lab</a>. For more
+                information on my research, please refer to the <a href="/~apandey/publication.html">Publications</a>
+                page. I occasionally write informal technical posts on the <a href="/~apandey/blog.html">Blog</a>
+                page.<br><br>I am working as an Adjunct Professor for Spring 2021-2022 semester at the Harvey Mudd
+                College. I am teaching a course that I have designed on <a
+                    href="https://pages.hmc.edu/pandey/">Introduction to Biological System Design</a>. </p>
+
+            <p>In 2019, I graduated with a masters in Electrical Engineering at Caltech. Before that, in 2017, I
+                graduated with a bachelors and a masters degree from the Indian Institute of Technoloy (IIT) Kharagpur,
+                India. My Bachelor of Technology degree is in instrumentation engineering and Master of Technology in
+                control systems engineering from the Electrical Engineering department.</p>
+
+            <h2 id="research-interests">Research Interests</h2>
+
+            <ul>
+                <li>Control theory</li>
+                <li>Systems and synthetic biology</li>
+                <li>Robustness of nonlinear systems</li>
+                <li>Artificial intelligence methods for systems modeling</li>
+            </ul>
+
+            <hr />
+            <hr />
+
+            <h2 id="news">Milestones </h2>
+            <ul>
+                <li>April 2022: Last lecture at Harvey Mudd! It was a pleasure teaching the class on <a
+                        href="https://biosysdesign.github.io/E164/">Introduction to Biological System Design</a> at the
+                    Harvey Mudd College. Here's a snapshot of the class review lecture at the end: <img src="e164_board.png"></li>
+                <li>April 2022: New preprint! We posted a new bioRxiv preprint on our recent work: "From Specification
+                    to Implementation: Assume-Guarantee Contracts for Synthetic Biology". PDF on <a
+                        href="https://www.biorxiv.org/content/10.1101/2022.04.08.487709v1">bioRxiv</a>. You can use the
+                    implementation of our paper on <a
+                        href="https://colab.research.google.com/drive/1Hznt1QWCpxeU6wGiv-ozG6tn5869eq5C?usp=sharing">Google
+                        Colab</a> to convert your own biological system specification into simple mathematical models!
+                </li>
+                <li>March 2022: Presented a poster at the 8th Build-A-Cell workshop on "Full-Stack Modeling of
+                    Biological Circuits: From Specifications to Implementation using Python. <a
+                        href="/~apandey/documents/poster_buildacell.pdf">PDF</a>.</li>
+                <li>February 2022: Our paper on "BioCRNpyler: Compiling Chemical Reaction Networks from Biomolecular
+                    Parts in Diverse Contexts" was accepted (in February) and published (in April) in <a
+                        href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009987">PLoS
+                        Computational Biology</a>.</li>
+                <li>January 2022: Our paper on "Robustness guarantees for structured model reduction of dynamical
+                    systems with applications to biomolecular models" was accepted and published in the Special Issue on
+                    Life Sciences of the International Journal of Robust and Nonlinear Control. <a
+                        href=https://onlinelibrary.wiley.com/doi/full/10.1002/rnc.6013">URL</a>.</li>
+                <li>January 2022: Started teaching <a href="https://pages.hmc.edu/pandey/">Introduction to Biological
+                        System Design</a> at Harvey Mudd College.</li>
+                <li>December 2021: Appointed as Adjunct Professor at Harvey Mudd College for the Spring 2021-22
+                    semester.</li>
+                <li>November 2021: Released a summary video of my research on model reduction. You can watch the video
+                    here: <iframe width="630" height="323" src="https://www.youtube.com/embed/cYK3SOnMMoM"
+                        title="Robustness Guarantees for Structured Model Reduction of Dynamical Systems"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+                <li>September 2021: We organized a workshop at International Workshop on Bio-Design Automation (IWBDA)
+                    2021 on "Chemical Reaction Network Compilation to Bayesian Parameter Inference". You can check out
+                    the workshop <a href="https://www.iwbdaconf.org/2021/docs/CRNToBayesParamInference.pdf">poster</a>
+                    and the <a
+                        href="https://www.youtube.com/watch?v=YT847E9_Dqs&ab_channel=Bio-DesignAutomationConsortium">recording
+                        on Youtube</a>. All content of the workshop was interactive using Google Colaboratory notebook,
+                    which is available <a
+                        href="https://colab.research.google.com/drive/1S3dDRyfsnEft_dGcLlFfusVZvFzFcRLc?usp=sharing">here</a>.
+                </li>
+                <li>September 2021: Helped write a research grant proposal on forward design of synthetic biological
+                    circuits. Details soon.</li>
+                <li>August 2021: Served as a reviewer for the Journal of Open Source Software (JOSS) to <a
+                        href=https://github.com/openjournals/joss-reviews/issues/3362">review</a> the paper on OSTIR:
+                    open source translation initiation rate prediction. Check out the software on <a
+                        href="https://github.com/barricklab/ostir">Github</a> and the paper <a
+                        href=https://joss.theoj.org/papers/10.21105/joss.03362">here</a>.</li>
+                <li>August 2021: Co-mentored three Caltech undergraduate students in their summer internship projects in
+                    our lab. Details on the Teaching and Mentoring <a href="/~apandey/teaching.html">page</a>.</li>
+                <li>July 2021: Our theory paper on robustness of model reduction for linear dynamical systems accepted
+                    at Conference on Decision and Control (CDC) 2021. You can read the paper <a
+                        href="/~apandey/documents/cdc_2021.pdf"> PDF here</a>. I am also a student host volunteer for
+                    the conference - to be organized virtually in December 2021.</li>
+                <li>Access the archive of update posts <a href="/~apandey/archive_updates.html">here</a>.</li>
+            </ul>
+        </div>
+        <hr />
+        <hr />
+    </div>
+
+</body>
+
+</html>
